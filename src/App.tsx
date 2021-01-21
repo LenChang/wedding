@@ -1,8 +1,11 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
+import { Button } from "@material-ui/core";
 import { Card, CardContent, CardHeader, Paper } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 import backgroundPicture from "./static/images/main.jpg";
 
@@ -95,50 +98,92 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function App() {
+const FirstPage = () => {
+  const history = useHistory();
   const classes = useStyles();
 
   return (
-    <div>
-      <Paper elevation={3} className={classes.topRoot}>
-        <Card>
-          <CardHeader title="懷倫-冠陵電子喜帖 v0.0.1" />
-          <CardContent>
-            <div className={classes.root}>
-              {images.map((image) => (
-                <ButtonBase
-                  focusRipple
-                  key={image.title}
-                  className={classes.image}
-                  focusVisibleClassName={classes.focusVisible}
+    <Paper elevation={3} className={classes.topRoot}>
+      <Card>
+        <CardHeader title="懷倫-冠陵電子喜帖 v0.0.1" />
+        <CardContent>
+          <div className={classes.root}>
+            {images.map((image) => (
+              <ButtonBase
+                focusRipple
+                key={image.title}
+                className={classes.image}
+                focusVisibleClassName={classes.focusVisible}
+                onClick={() => {
+                  history.push("/search");
+                }}
+                style={{
+                  width: image.width,
+                }}
+              >
+                <span
+                  className={classes.imageSrc}
                   style={{
-                    width: image.width,
+                    backgroundImage: `url(${image.url})`,
                   }}
-                >
-                  <span
-                    className={classes.imageSrc}
-                    style={{
-                      backgroundImage: `url(${image.url})`,
-                    }}
-                  />
-                  <span className={classes.imageBackdrop} />
-                  <span className={classes.imageButton}>
-                    <Typography
-                      component="span"
-                      variant="subtitle1"
-                      color="inherit"
-                      className={classes.imageTitle}
-                    >
-                      {image.title}
-                      <span className={classes.imageMarked} />
-                    </Typography>
-                  </span>
-                </ButtonBase>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </Paper>
-    </div>
+                />
+                <span className={classes.imageBackdrop} />
+                <span className={classes.imageButton}>
+                  <Typography
+                    component="span"
+                    variant="subtitle1"
+                    color="inherit"
+                    className={classes.imageTitle}
+                  >
+                    {image.title}
+                    <span className={classes.imageMarked} />
+                  </Typography>
+                </span>
+              </ButtonBase>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </Paper>
+  );
+};
+
+const SearchPage = () => {
+  const history = useHistory();
+
+  return (
+    <>
+      <div>To be continued....</div>;
+      <Button
+        variant="outlined"
+        color="primary"
+        onClick={() => {
+          history.push("/");
+        }}
+      >
+        Home
+      </Button>
+    </>
+  );
+};
+
+export default function App() {
+  const history = useHistory();
+
+  return (
+    <Router>
+      <div>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route exact path="/search">
+            <SearchPage />
+          </Route>
+          <Route path="/">
+            <FirstPage />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
