@@ -1,12 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import ButtonBase from "@material-ui/core/ButtonBase";
-import Typography from "@material-ui/core/Typography";
-import { Button } from "@material-ui/core";
-import { Card, CardContent, CardHeader, Paper } from "@material-ui/core";
+import {
+  Button,
+  ButtonBase,
+  Card,
+  CardContent,
+  CardHeader,
+  Paper,
+  Typography,
+} from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
+import SearchPage from "./SearchPage";
 import backgroundPicture from "./static/images/main.jpg";
 
 const images = [
@@ -148,28 +154,7 @@ const FirstPage = () => {
   );
 };
 
-const SearchPage = () => {
-  const history = useHistory();
-
-  return (
-    <>
-      <div>To be continued....</div>;
-      <Button
-        variant="outlined"
-        color="primary"
-        onClick={() => {
-          history.push("/");
-        }}
-      >
-        Home
-      </Button>
-    </>
-  );
-};
-
 export default function App() {
-  const history = useHistory();
-
   return (
     <Router>
       <div>
