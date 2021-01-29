@@ -1,9 +1,11 @@
-export const contact: {
+export interface IContack {
   userName: string;
   userEmail: string;
   peopleCount: number;
   tableIndex: string;
-}[] = [
+}
+
+export const contactList: IContack[] = [
   {
     userName: "張懷倫",
     userEmail: "lamgo.chang@gmail.com",
