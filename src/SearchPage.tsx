@@ -21,6 +21,8 @@ import {
 } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { Base64 } from "js-base64";
+import QRCode from "qrcode.react";
 
 import { contactList, IContack } from "./static/contact";
 import backgroundPicture from "./static/images/main.jpg";
@@ -44,7 +46,13 @@ export default () => {
         inviter.userName === searchTerms?.name
     );
 
-    if (result) return setUserInfo(result);
+    if (result) {
+      const encodeString = Base64.encode(result.userName);
+      const decodeString = Base64.decode(encodeString);
+      console.log(`Encode: ${encodeString}. Decode: ${decodeString}`);
+      setUserInfo(result);
+      return history.push(`/user/${encodeString}`);
+    }
 
     setSnackbarOpen(true);
 
@@ -136,6 +144,7 @@ export default () => {
           )}
         </CardContent>
       </Card>
+      {/* <QRCode value="https://www.facebook.com/image.fish" /> */}
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={6000}

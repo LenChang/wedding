@@ -13,6 +13,7 @@ import {
 import { useHistory } from "react-router-dom";
 
 import SearchPage from "./SearchPage";
+import User from "./User";
 import backgroundPicture from "./static/images/main.jpg";
 
 const images = [
@@ -164,6 +165,7 @@ export default function App() {
           <Route exact path="/search">
             <SearchPage />
           </Route>
+          <Route exact path="/user/:userId" children={<User />} />
           <Route path="/">
             <FirstPage />
           </Route>
