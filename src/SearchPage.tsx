@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import MuiAlert from "@material-ui/lab/Alert";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { Base64 } from "js-base64";
 import {
   AppBar,
   Button,
@@ -19,10 +22,6 @@ import {
   Toolbar,
   CardActions,
 } from "@material-ui/core";
-import MuiAlert from "@material-ui/lab/Alert";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import { Base64 } from "js-base64";
-import QRCode from "qrcode.react";
 
 import { contactList, IContack } from "./static/contact";
 import backgroundPicture from "./static/images/main.jpg";
@@ -34,7 +33,6 @@ export default () => {
     email: string;
     name: string;
   }>({ email: "", name: "" });
-  const [userInfo, setUserInfo] = useState<IContack | null>(null);
   const [snackbarOpen, setSnackbarOpen] = useState<boolean>(false);
 
   const handleSearhButtonClick = () => {
@@ -48,9 +46,6 @@ export default () => {
 
     if (result) {
       const encodeString = Base64.encode(result.userName);
-      const decodeString = Base64.decode(encodeString);
-      console.log(`Encode: ${encodeString}. Decode: ${decodeString}`);
-      setUserInfo(result);
       return history.push(`/user/${encodeString}`);
     }
 
@@ -123,28 +118,6 @@ export default () => {
           </Button>
         </CardActions>
       </Card>
-      <Card>
-        <CardContent>
-          {userInfo && (
-            <List>
-              <ListItem>
-                <ListItemText>{userInfo.userName}</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>{userInfo.userEmail}</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>{userInfo.peopleCount}</ListItemText>
-              </ListItem>
-
-              <ListItem>
-                <ListItemText>{userInfo.tableIndex}</ListItemText>
-              </ListItem>
-            </List>
-          )}
-        </CardContent>
-      </Card>
-      {/* <QRCode value="https://www.facebook.com/image.fish" /> */}
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={6000}
