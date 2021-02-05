@@ -21,6 +21,7 @@ import {
   marriageEvent,
   afterParty,
 } from "./static/process";
+import userCover from "./static/images/weddingCard_User.jpg";
 
 export default () => {
   const { userId } = useParams<{ userId: string }>();
@@ -33,7 +34,16 @@ export default () => {
 
   return (
     <>
-      <Card elevation={3} style={{ margin: 20 }}>
+      <Card
+        elevation={3}
+        style={{
+          margin: 20,
+          backgroundImage: `url(${userCover})`,
+          backgroundPosition: "right bottom",
+          backgroundSize: "50%",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <CardHeader title="貴賓資訊" />
         <Divider />
         <CardContent>
@@ -48,7 +58,7 @@ export default () => {
               <ListItem
                 style={{
                   display: "flex",
-                  justifyContent: "center",
+                  justifyContent: "left",
                   alignContent: "center",
                 }}
               >
