@@ -16,6 +16,11 @@ import {
 
 import { contactList, IContack } from "./static/contact";
 import { trafficCar } from "./static/trafficCar";
+import {
+  witnessMarriageEvent,
+  marriageEvent,
+  afterParty,
+} from "./static/process";
 
 export default () => {
   const { userId } = useParams<{ userId: string }>();
@@ -109,6 +114,55 @@ export default () => {
                 secondary={trafficCar.rideGoogleMap}
               />
             </ListItem>
+          </List>
+        </CardContent>
+      </Card>
+      {userInfo?.isWitnessMarriage && (
+        <Card elevation={3} style={{ margin: 20 }}>
+          <CardHeader title="證婚流程" />
+          <CardContent>
+            <List>
+              {witnessMarriageEvent.map((event) => (
+                <ListItem>
+                  <ListItemText
+                    primary={`${event.content}  //${event.building}`}
+                    secondary={event.time}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </CardContent>
+        </Card>
+      )}
+      <Card elevation={3} style={{ margin: 20 }}>
+        <CardHeader title="午宴資訊" />
+        <CardContent>
+          <List>
+            {marriageEvent.map((event) => (
+              <ListItem>
+                <ListItemText
+                  primary={`${event.content}  //${event.building}`}
+                  secondary={event.time}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </CardContent>
+      </Card>
+      <Card elevation={3} style={{ margin: 20 }}>
+        <CardHeader title="After Party" />
+        <CardContent>
+          <List>
+            {afterParty.map((event) => (
+              <>
+                <ListItem>
+                  <ListItemText
+                    primary={`${event.content}  //${event.building}`}
+                    secondary={event.time}
+                  />
+                </ListItem>
+              </>
+            ))}
           </List>
         </CardContent>
       </Card>

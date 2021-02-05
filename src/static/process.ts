@@ -58,7 +58,7 @@ export const afterParty: {
 }[] = [
   {
     time: "PM 4:00 ~ PM 6:00",
-    content: "After Party",
+    content: "Party Time",
     building: "小步舞曲",
     googleMap: "未定",
   },
