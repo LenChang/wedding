@@ -24,7 +24,7 @@ import {
 } from "@material-ui/core";
 
 import { contactList, IContack } from "./static/contact";
-import backgroundPicture from "./static/images/main.jpg";
+import backgroundPicture from "./static/images/search.jpg";
 
 export default () => {
   const history = useHistory();

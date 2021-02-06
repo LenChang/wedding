@@ -135,7 +135,7 @@ export default () => {
               {witnessMarriageEvent.map((event) => (
                 <ListItem>
                   <ListItemText
-                    primary={`${event.content}  //${event.building}`}
+                    primary={`${event.content}  // ${event.building}`}
                     secondary={event.time}
                   />
                 </ListItem>
@@ -151,7 +151,7 @@ export default () => {
             {marriageEvent.map((event) => (
               <ListItem>
                 <ListItemText
-                  primary={`${event.content}  //${event.building}`}
+                  primary={`${event.content}  // ${event.building}`}
                   secondary={event.time}
                 />
               </ListItem>
@@ -167,7 +167,7 @@ export default () => {
               <>
                 <ListItem>
                   <ListItemText
-                    primary={`${event.content}  //${event.building}`}
+                    primary={`${event.content}  // ${event.building}`}
                     secondary={event.time}
                   />
                 </ListItem>
