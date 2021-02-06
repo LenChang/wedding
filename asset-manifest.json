@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/wedding/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/wedding/static/js/main.ceac4e4b.chunk.js",
-    "main.js.map": "/wedding/static/js/main.ceac4e4b.chunk.js.map",
-    "runtime-main.js": "/wedding/static/js/runtime-main.9787e76f.js",
-    "runtime-main.js.map": "/wedding/static/js/runtime-main.9787e76f.js.map",
-    "static/js/2.27cd9c45.chunk.js": "/wedding/static/js/2.27cd9c45.chunk.js",
-    "static/js/2.27cd9c45.chunk.js.map": "/wedding/static/js/2.27cd9c45.chunk.js.map",
-    "static/js/3.a938adec.chunk.js": "/wedding/static/js/3.a938adec.chunk.js",
-    "static/js/3.a938adec.chunk.js.map": "/wedding/static/js/3.a938adec.chunk.js.map",
+    "main.js": "/wedding/static/js/main.822af7ae.chunk.js",
+    "main.js.map": "/wedding/static/js/main.822af7ae.chunk.js.map",
+    "runtime-main.js": "/wedding/static/js/runtime-main.f5690b1a.js",
+    "runtime-main.js.map": "/wedding/static/js/runtime-main.f5690b1a.js.map",
+    "static/js/2.df765e62.chunk.js": "/wedding/static/js/2.df765e62.chunk.js",
+    "static/js/2.df765e62.chunk.js.map": "/wedding/static/js/2.df765e62.chunk.js.map",
+    "static/js/3.06876351.chunk.js": "/wedding/static/js/3.06876351.chunk.js",
+    "static/js/3.06876351.chunk.js.map": "/wedding/static/js/3.06876351.chunk.js.map",
     "index.html": "/wedding/index.html",
     "static/css/main.2ae47eeb.chunk.css.map": "/wedding/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.27cd9c45.chunk.js.LICENSE.txt": "/wedding/static/js/2.27cd9c45.chunk.js.LICENSE.txt",
+    "static/js/2.df765e62.chunk.js.LICENSE.txt": "/wedding/static/js/2.df765e62.chunk.js.LICENSE.txt",
     "static/media/main.3c5118f0.jpg": "/wedding/static/media/main.3c5118f0.jpg",
     "static/media/search.ec04d912.jpg": "/wedding/static/media/search.ec04d912.jpg",
     "static/media/weddingCard_User.9e9a2475.jpg": "/wedding/static/media/weddingCard_User.9e9a2475.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9787e76f.js",
-    "static/js/2.27cd9c45.chunk.js",
+    "static/js/runtime-main.f5690b1a.js",
+    "static/js/2.df765e62.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.ceac4e4b.chunk.js"
+    "static/js/main.822af7ae.chunk.js"
   ]
 }
