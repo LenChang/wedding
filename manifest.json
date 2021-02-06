@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "冠陵-懷倫電子喜帖",
+  "name": "日期: 2021-02-28",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "logoWedding.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
