@@ -11,6 +11,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Link,
   Typography,
 } from "@material-ui/core";
 
@@ -52,7 +53,13 @@ export default () => {
               <ListItem>
                 <ListItemText
                   primary="您的電子喜帖網址"
-                  secondary={urlString}
+                  secondary={
+                    <Typography noWrap>
+                      <Link target="_blank" href={urlString}>
+                        {urlString}
+                      </Link>
+                    </Typography>
+                  }
                 />
               </ListItem>
               <ListItem
