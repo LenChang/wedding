@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import MetaTags from "react-meta-tags";
+
 import "./index.css";
 import App from "./App";
-import { ReactComponent as Svg } from "./logo.svg";
 import reportWebVitals from "./reportWebVitals";
-import MetaTags from "react-meta-tags";
+import logo from "./static/images/logoWedding.jpg";
 
 ReactDOM.render(
   <React.StrictMode>
     <MetaTags>
-      <title>Test1234</title>
-      <meta name="description" content="Some description for Test1234" />
-      <meta property="og:title" content="MyApp for Test1234" />
+      <title>懷倫-冠陵婚禮邀請函-20210228</title>
+      <meta name="description" content="懷倫-冠陵婚禮邀請函-20210228" />
+      <meta property="og:title" content="懷倫-冠陵婚禮邀請函" />
+      <meta property="og:image" content={logo} />
     </MetaTags>
     <App />
   </React.StrictMode>,
