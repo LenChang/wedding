@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Button,
@@ -157,7 +163,9 @@ const FirstPage = () => {
 
 export default function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}>
+    <HashRouter
+      basename={process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}
+    >
       <div>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -171,6 +179,6 @@ export default function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
