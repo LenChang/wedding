@@ -5,19 +5,19 @@ export const witnessMarriageEvent: {
   googleMap: string;
 }[] = [
   {
-    time: "AM 9:30 ~ AM 9:45",
+    time: "AM 9:45 ~ AM 10:00",
     content: "賓客入場",
     building: "許諾禮堂",
     googleMap: "https://goo.gl/maps/Htb7SkPnPGpoVHTx8",
   },
   {
-    time: "AM 09:45 ~ AM 10:05",
+    time: "AM 10:00 ~ AM 10:20",
     content: "證婚儀式",
     building: "許諾禮堂",
     googleMap: "https://goo.gl/maps/Htb7SkPnPGpoVHTx8",
   },
   {
-    time: "AM 10:10 ~ AM 10:30",
+    time: "AM 10:20 ~ AM 10:40",
     content: "大合照",
     building: "許諾禮堂",
     googleMap: "https://goo.gl/maps/Htb7SkPnPGpoVHTx8",
