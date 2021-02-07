@@ -25,7 +25,7 @@ import backgroundPicture from "./static/images/main.jpg";
 const images = [
   {
     url: backgroundPicture,
-    title: "開始",
+    title: "請按我",
     width: "100%",
   },
 ];
@@ -116,48 +116,47 @@ const FirstPage = () => {
   const classes = useStyles();
 
   return (
-    <Paper elevation={3} className={classes.topRoot}>
-      <Card>
-        <CardHeader title="懷倫-冠陵電子喜帖 v0.0.1" />
-        <CardContent>
-          <div className={classes.root}>
-            {images.map((image) => (
-              <ButtonBase
-                focusRipple
-                key={image.title}
-                className={classes.image}
-                focusVisibleClassName={classes.focusVisible}
-                onClick={() => {
-                  history.push("/search");
-                }}
+    // <Paper elevation={3} className={classes.topRoot}>
+    <Card>
+      <CardContent>
+        <div className={classes.root}>
+          {images.map((image) => (
+            <ButtonBase
+              focusRipple
+              key={image.title}
+              className={classes.image}
+              focusVisibleClassName={classes.focusVisible}
+              onClick={() => {
+                history.push("/search");
+              }}
+              style={{
+                width: image.width,
+              }}
+            >
+              <span
+                className={classes.imageSrc}
                 style={{
-                  width: image.width,
+                  backgroundImage: `url(${image.url})`,
                 }}
-              >
-                <span
-                  className={classes.imageSrc}
-                  style={{
-                    backgroundImage: `url(${image.url})`,
-                  }}
-                />
-                <span className={classes.imageBackdrop} />
-                <span className={classes.imageButton}>
-                  <Typography
-                    component="span"
-                    variant="subtitle1"
-                    color="inherit"
-                    className={classes.imageTitle}
-                  >
-                    {image.title}
-                    <span className={classes.imageMarked} />
-                  </Typography>
-                </span>
-              </ButtonBase>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    </Paper>
+              />
+              <span className={classes.imageBackdrop} />
+              <span className={classes.imageButton}>
+                <Typography
+                  component="span"
+                  variant="subtitle1"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.title}
+                  <span className={classes.imageMarked} />
+                </Typography>
+              </span>
+            </ButtonBase>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+    // </Paper>
   );
 };
 

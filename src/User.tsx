@@ -7,7 +7,9 @@ import {
   Card,
   CardContent,
   CardHeader,
+  CardMedia,
   Divider,
+  Hidden,
   List,
   ListItem,
   ListItemText,
@@ -22,7 +24,8 @@ import {
   marriageEvent,
   afterParty,
 } from "./static/process";
-import userCover from "./static/images/weddingCard_User.jpg";
+import userInfoCover from "./static/images/weddingCard_User.jpg";
+import paperCard from "./static/images/paper.jpg";
 
 export default () => {
   const { userId } = useParams<{ userId: string }>();
@@ -35,11 +38,21 @@ export default () => {
 
   return (
     <>
+      <Hidden mdUp>
+        <Card elevation={3} style={{ margin: 20 }}>
+          <CardHeader title="您的邀請函" style={{ textAlign: "center" }} />
+          <CardMedia
+            image={paperCard}
+            title="Paper Card"
+            style={{ width: "100%", height: 800 }}
+          />
+        </Card>
+      </Hidden>
       <Card
         elevation={3}
         style={{
           margin: 20,
-          backgroundImage: `url(${userCover})`,
+          backgroundImage: `url(${userInfoCover})`,
           backgroundPosition: "right bottom",
           backgroundSize: "50%",
           backgroundRepeat: "no-repeat",
