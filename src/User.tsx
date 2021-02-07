@@ -37,9 +37,12 @@ export default () => {
   const urlString = window.location.href;
 
   return (
-    <>
+    <div style={{ backgroundColor: "pink" }}>
       <Hidden mdUp>
-        <Card elevation={3} style={{ margin: 20 }}>
+        <Card
+          elevation={3}
+          style={{ marginBottom: 20, marginLeft: 20, marginRight: 20 }}
+        >
           <CardHeader title="您的邀請函" style={{ textAlign: "center" }} />
           <CardMedia
             image={paperCard}
@@ -196,6 +199,6 @@ export default () => {
           </List>
         </CardContent>
       </Card>
-    </>
+    </div>
   );
 };
