@@ -54,7 +54,7 @@ export const contactList: IContack[] = [
     userEmail: "scythe197@gmail.com",
     peopleCount: 1,
     tableIndex: "未定",
-    isWitnessMarriage: false,
+    isWitnessMarriage: true,
   },
   {
     userName: "黃昱儒",
