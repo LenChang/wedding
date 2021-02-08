@@ -124,32 +124,34 @@ export default () => {
           )}
         </CardContent>
       </Card>
-      <Card elevation={3} style={{ margin: 20 }}>
-        <CardHeader title="乘車資訊" />
-        <Divider />
-        <CardContent>
-          <List>
-            <ListItem>
-              <ListItemText
-                primary="搭車時間"
-                secondary={trafficCar.rideTime}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemText
-                primary="搭車地點"
-                secondary={trafficCar.rideLocation}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemText
-                primary="搭車地點 (Google Map)"
-                secondary={trafficCar.rideGoogleMap}
-              />
-            </ListItem>
-          </List>
-        </CardContent>
-      </Card>
+      {userInfo && userInfo.peopleCount > 0 && (
+        <Card elevation={3} style={{ margin: 20 }}>
+          <CardHeader title="乘車資訊" />
+          <Divider />
+          <CardContent>
+            <List>
+              <ListItem>
+                <ListItemText
+                  primary="搭車時間"
+                  secondary={trafficCar.rideTime}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary="搭車地點"
+                  secondary={trafficCar.rideLocation}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary="搭車地點 (Google Map)"
+                  secondary={trafficCar.rideGoogleMap}
+                />
+              </ListItem>
+            </List>
+          </CardContent>
+        </Card>
+      )}
       {userInfo?.isWitnessMarriage && (
         <Card elevation={3} style={{ margin: 20 }}>
           <CardHeader title="證婚流程" />
@@ -167,38 +169,42 @@ export default () => {
           </CardContent>
         </Card>
       )}
-      <Card elevation={3} style={{ margin: 20 }}>
-        <CardHeader title="午宴資訊" />
-        <CardContent>
-          <List>
-            {marriageEvent.map((event) => (
-              <ListItem>
-                <ListItemText
-                  primary={`${event.content}  // ${event.building}`}
-                  secondary={event.time}
-                />
-              </ListItem>
-            ))}
-          </List>
-        </CardContent>
-      </Card>
-      <Card elevation={3} style={{ margin: 20 }}>
-        <CardHeader title="After Party" />
-        <CardContent>
-          <List>
-            {afterParty.map((event) => (
-              <>
-                <ListItem>
-                  <ListItemText
-                    primary={`${event.content}  // ${event.building}`}
-                    secondary={event.time}
-                  />
-                </ListItem>
-              </>
-            ))}
-          </List>
-        </CardContent>
-      </Card>
+      {userInfo && userInfo.peopleCount > 0 && (
+        <>
+          <Card elevation={3} style={{ margin: 20 }}>
+            <CardHeader title="午宴資訊" />
+            <CardContent>
+              <List>
+                {marriageEvent.map((event) => (
+                  <ListItem>
+                    <ListItemText
+                      primary={`${event.content}  // ${event.building}`}
+                      secondary={event.time}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </CardContent>
+          </Card>
+          <Card elevation={3} style={{ margin: 20 }}>
+            <CardHeader title="After Party" />
+            <CardContent>
+              <List>
+                {afterParty.map((event) => (
+                  <>
+                    <ListItem>
+                      <ListItemText
+                        primary={`${event.content}  // ${event.building}`}
+                        secondary={event.time}
+                      />
+                    </ListItem>
+                  </>
+                ))}
+              </List>
+            </CardContent>
+          </Card>
+        </>
+      )}
     </div>
   );
 };
