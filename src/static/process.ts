@@ -6,7 +6,7 @@ export const witnessMarriageEvent: {
 }[] = [
   {
     time: "AM 9:45 ~ AM 10:00",
-    content: "賓客入場",
+    content: "賓客入場 (二排位置以後可入座)",
     building: "許諾禮堂",
     googleMap: "https://goo.gl/maps/Htb7SkPnPGpoVHTx8",
   },

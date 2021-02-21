@@ -26,6 +26,7 @@ import {
 } from "./static/process";
 import userInfoCover from "./static/images/weddingCard_User.jpg";
 import paperCard from "./static/images/paper.jpg";
+import meetingSpace from "./static/images/before-meeting.jpg";
 
 export default () => {
   const { userId } = useParams<{ userId: string }>();
@@ -155,6 +156,11 @@ export default () => {
       {userInfo?.isWitnessMarriage && (
         <Card elevation={3} style={{ margin: 20 }}>
           <CardHeader title="證婚流程" />
+          <CardMedia
+            image={meetingSpace}
+            style={{ width: "100%", height: 200 }}
+            title="meeting space"
+          />
           <CardContent>
             <List>
               {witnessMarriageEvent.map((event) => (
