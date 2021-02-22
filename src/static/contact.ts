@@ -94,9 +94,16 @@ export const contactList: IContack[] = [
   {
     userName: "Alan Yang",
     userEmail: "finalcoffee99@gmail.com",
-    peopleCount: 2,
+    peopleCount: 1,
     tableIndex: "未定",
-    isWitnessMarriage: false,
+    isWitnessMarriage: true,
+  },
+  {
+    userName: "Marie Yeh",
+    userEmail: "marie.yeh@xuenn.com",
+    peopleCount: 1,
+    tableIndex: "未定",
+    isWitnessMarriage: true,
   },
   {
     userName: "Raistlin",
@@ -227,8 +234,8 @@ export const contactList: IContack[] = [
   {
     userName: "葉毓仁",
     userEmail: "randygogo@hotmail.com",
-    peopleCount: 2,
-    tableIndex: "未定",
+    peopleCount: 0,
+    tableIndex: "不出席",
     isWitnessMarriage: false,
   },
   {
@@ -292,7 +299,7 @@ export const contactList: IContack[] = [
     userEmail: "ub07250530@gmail.com",
     peopleCount: 2,
     tableIndex: "未定",
-    isWitnessMarriage: true,
+    isWitnessMarriage: false,
   },
   {
     userName: "余之陶",
