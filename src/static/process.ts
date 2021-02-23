@@ -44,8 +44,8 @@ export const marriageEvent: {
   },
   {
     time: "PM 3:15",
-    content: "接駁車出發(心之芳庭",
-    building: "心之方庭停車場",
+    content: "接駁車搭乘人員集合 (心之芳庭)",
+    building: "宴會廳外集合，由總召帶領前往搭車地點",
     googleMap: "未定",
   },
 ];
