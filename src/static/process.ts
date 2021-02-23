@@ -45,7 +45,7 @@ export const marriageEvent: {
   {
     time: "PM 3:15",
     content: "接駁車出發(心之芳庭",
-    building: "未定",
+    building: "心之方庭停車場",
     googleMap: "未定",
   },
 ];
@@ -63,9 +63,9 @@ export const afterParty: {
     googleMap: "未定",
   },
   {
-    time: "PM 6:30",
-    content: "接駁車出發(心之芳庭)",
-    building: "未定",
+    time: "PM 6:00",
+    content: "Taxi 代客叫車",
+    building: "心之方庭門口",
     googleMap: "未定",
   },
 ];
